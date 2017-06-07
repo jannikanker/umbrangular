@@ -1,0 +1,55 @@
+﻿<div ng-controller="My.Venue.EditController as vm">
+
+    <form name="venueForm" novalidate val-form-manager>
+
+        <umb-load-indicator 
+            ng-if="vm.loading">
+        </umb-load-indicator>
+
+        <umb-editor-view ng-if="!vm.loading">
+
+            <umb-editor-header 
+                name="vm.venue.name"
+                navigation="vm.page.navigation"
+                hide-alias="true"
+                hide-description="true"
+                hide-icon="true">
+            </umb-editor-header>
+
+            <umb-editor-container class="form-horizontal">
+
+                <umb-editor-sub-views
+                    sub-views="vm.page.navigation"
+                    model="vm.venue">
+                </umb-editor-sub-views>
+
+            </umb-editor-container>
+
+            <umb-editor-footer>
+
+                <umb-editor-footer-content-left>
+
+                    <umb-keyboard-shortcuts-overview
+                        model="vm.page.keyboardShortcutsOverview">
+                    </umb-keyboard-shortcuts-overview>
+
+                </umb-editor-footer-content-left>
+
+                <umb-editor-footer-content-right>
+                    <umb-button
+                        action="vm.save()"
+                        type="button"
+                        button-style="success"
+                        state="vm.buttonState"
+                        shortcut="ctrl+s"
+                        label="Save venue"
+                        disabled="vm.buttonState === 'busy'">
+                    </umb-button>
+                </umb-editor-footer-content-right>
+            </umb-editor-footer>
+
+        </umb-editor-view>
+
+    </form>
+
+</div>

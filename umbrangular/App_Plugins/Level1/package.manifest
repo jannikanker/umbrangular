@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json.schemastore.org/package.manifest",
+    "propertyEditors": [
+        {
+          "name": "Level 1 - Venues",
+          "alias": "my.venueOne",
+          "group": "Maps",
+          "icon": "icon-map-location",
+            "editor": {
+                "view": "~/App_plugins/Level1/level1.html",
+                "valueType": "STRING"
+            }
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/Level1/level1.controller.js"
+    ]
+}

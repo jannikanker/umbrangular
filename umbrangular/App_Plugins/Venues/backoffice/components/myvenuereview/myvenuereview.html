@@ -1,0 +1,34 @@
+<div class="my-venue-review">
+
+    <div class="my-venue-review__sidebar">
+        <div class="my-venue-review__avatar">
+            <umb-avatar
+                size="xl"
+                img-src="{{ review.authorAvatar }}">
+            </umb-avatar>
+        </div>
+        <div class="my-venue-review__rating">{{review.rating}}/5</div>
+    </div>
+
+    <div class="my-venue-review__content">
+        <div class="my-venue-review__author">Review by {{ review.authorName }}</div>
+        <div class="my-venue-review__review-title">{{ review.reviewTitle }}</div>
+        <div class="my-venue-review__review-content">{{ review.reviewContent }}</div>
+    </div>
+
+    <div class="my-venue-review__actions">
+        <umb-button
+            label="Reply"
+            type="submit"
+            button-style="link"
+            icon="icon-reply-arrow">
+        </umb-button>
+        <umb-button
+            label="Mark as spam"
+            type="submit"
+            button-style="link"
+            icon="icon-alert">
+        </umb-button>
+    </div>
+
+</div>

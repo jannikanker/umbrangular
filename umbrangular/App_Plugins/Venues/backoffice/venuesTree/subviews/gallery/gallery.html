@@ -1,0 +1,21 @@
+<div ng-controller="My.Venue.GalleryController as vm">
+
+    <umb-media-grid
+        items="vm.images"
+        on-click="vm.clickItem">
+    </umb-media-grid>
+
+    <umb-lightbox
+        ng-if="vm.lightbox.show"
+        items="vm.lightbox.items"
+        active-item-index="vm.lightbox.activeIndex"
+        on-close="vm.closeLightbox">
+    </umb-lightbox>
+
+    <umb-empty-state
+        ng-if="vm.images.length === 0"
+        position="center">
+        No images in this gallery
+    </umb-empty-state>
+
+</div>

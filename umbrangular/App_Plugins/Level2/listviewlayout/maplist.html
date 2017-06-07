@@ -1,0 +1,17 @@
+<div ng-controller="My.level2Controller as vm">
+    
+    <div style="margin-bottom: 30px;">
+        <my-google-maps
+            locations="vm.venues">
+        </my-google-maps>
+    </div>
+
+    <umb-table
+        ng-if="items"
+        items="items"
+        item-properties="options.includeProperties"
+        on-select="vm.selectItem"
+        on-click="vm.clickItem">
+    </umb-table>
+    
+ </div>

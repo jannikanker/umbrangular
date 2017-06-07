@@ -1,0 +1,58 @@
+.my-venue-reviews {
+    display: flex;
+    flex: 0 0 50%;
+}
+
+.my-venue-review {
+    display: flex;
+    padding: 15px 0;
+    border-radius: 3px;
+    border-bottom: 1px solid #F3F3F5;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.my-venue-review__sidebar {
+    margin-right: 20px;
+    flex: 0 0 120px;
+}
+
+.my-venue-review__content {
+    flex: 1 1 auto;
+}
+
+.my-venue-review__actions {
+    flex: 0 0 300px;
+    text-align: right;
+}
+
+.my-venue-review__author {
+    margin-bottom: 15px;
+    color: #A2A1A6;
+}
+
+.my-venue-review__review-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.my-venue-review__review-content {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+
+.my-venue-review__rating {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #413659;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}

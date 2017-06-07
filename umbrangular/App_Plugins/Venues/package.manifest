@@ -1,0 +1,26 @@
+{    
+    "propertyEditors": [{
+        "alias": "umbVenuePicker",
+        "name": "Venue Picker",
+        "group": "Pickers",
+        "icon": "icon-map-location",
+        "editor": {
+            "view": "~/App_Plugins/Venues/backoffice/propertyeditors/venuespicker/venuespicker.html"
+        }
+    }],
+    "javascript": [
+        "~/app_plugins/Venues/resources/venues.resource.js",
+        "~/app_plugins/Venues/backoffice/venuesTree/edit.controller.js",
+        "~/app_plugins/Venues/backoffice/venuesTree/subviews/details/details.controller.js",
+        "~/app_plugins/Venues/backoffice/venuesTree/subviews/gallery/gallery.controller.js",
+        "~/app_plugins/Venues/backoffice/venuesTree/subviews/booking/booking.controller.js",
+        "~/app_plugins/Venues/backoffice/propertyeditors/venuespicker/venuespicker.controller.js",
+        "~/app_plugins/Venues/backoffice/overlays/venuespicker/venuespicker.overlay.controller.js",
+        "~/app_plugins/Venues/backoffice/dashboards/venuesmap/venuesmap.controller.js",
+        // components
+        "~/app_plugins/Venues/backoffice/components/myvenuereview/myvenuereview.component.js"
+    ],
+    "css": [
+        "~/app_plugins/Venues/backoffice/components/myvenuereview/myvenuereview.css"
+    ]
+}

@@ -1,0 +1,29 @@
+<div ng-controller="My.Venues.Overlays.VenuesPickerController as vm">
+
+    <umb-load-indicator
+        ng-if="vm.loading">
+    </umb-load-indicator>
+
+    <div ng-if="!vm.loading">
+        
+        <ul class="umb-actions umb-actions-child">
+            <li>
+                <a href="" ng-repeat="venue in vm.venues" ng-click="vm.selectVenue(venue)">
+                    <i class="large {{venue.icon}}"></i>
+                    <span class="menu-label">
+                        {{ venue.name }}
+                        <small>{{ venue.address }}</small>
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <umb-empty-state
+            ng-if="vm.venues.length === 0"
+            position="center">
+            No venues
+        </umb-empty-state>
+
+    </div>
+
+</div>

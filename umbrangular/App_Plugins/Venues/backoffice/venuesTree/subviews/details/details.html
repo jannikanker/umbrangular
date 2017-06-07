@@ -1,0 +1,23 @@
+<div ng-controller="My.Venue.DetailsController as vm">
+
+    <umb-property property="vm.properties.description">
+        <textarea ng-model="model.description" rows="10" class="umb-editor"></textarea>
+    </umb-property>
+
+    <umb-property property="vm.properties.map">
+        <div style="width:66.6%">
+            <my-google-maps
+                locations="vm.locations">
+            </my-google-maps>
+        </div>
+    </umb-property>
+    
+    <umb-property property="vm.properties.address">
+        <input type="text" ng-model="model.address" class="umb-editor" />
+    </umb-property>
+
+    <umb-property property="vm.properties.capacity">
+        <input type="text" ng-model="model.capacity" class="umb-editor" />
+    </umb-property>
+
+</div>

@@ -1,0 +1,28 @@
+<div ng-controller="My.EditController as vm">
+
+    <div style="margin-bottom: 20px; width: 66.6%">
+        <my-google-maps
+            locations="vm.locations">
+        </my-google-maps>
+    </div>
+
+    <small>Venue address</small><br>
+    <input type="text" ng-model="model.value" class="umb-editor" ng-change="vm.changeAddress()" style="margin-bottom: 10px;" />
+
+    <div>
+        <umb-button
+            label="Add"
+            action="vm.addToMap()"
+            type="button"
+            button-style="info">
+        </umb-button>
+
+        <umb-button
+            label="Clear"
+            action="vm.removeFromMap()"
+            type="button"
+            button-style="danger">
+        </umb-button>
+    </div>
+
+</div>

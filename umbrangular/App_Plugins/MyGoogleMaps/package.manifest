@@ -1,0 +1,19 @@
+{
+    "propertyEditors": [{
+        "name": "My Google Maps",
+        "alias": "myGoogleMaps",
+        "group": "Maps",
+        "icon": "icon-map-location",
+        "editor": {
+            "view": "~/App_Plugins/MyGoogleMaps/edit.html"
+        }
+    }],
+    "javascript": [
+        "~/App_Plugins/MyGoogleMaps/edit.controller.js",
+        "~/App_Plugins/MyGoogleMaps/component/mygooglemaps.component.js",
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyDULMzul1UdFIAHiFcbeTyzU7PeIQ7vcV8"
+    ],
+    "css": [
+        "~/App_Plugins/MyGoogleMaps/component/mygooglemaps.css"
+    ]
+}

@@ -1,0 +1,33 @@
+<div ng-controller="My.Venues.VenuesPickerController as vm">
+
+    <div style="margin-bottom: 30px;">
+        <my-google-maps
+            locations="vm.venues">
+        </my-google-maps>
+    </div>
+
+    <umb-node-preview
+        ng-repeat="venue in vm.venues"
+        icon="venue.icon"
+        name="venue.name"
+        description="venue.address"
+        allow-remove="true"
+        on-remove="vm.removePickedVenue($index)">
+    </umb-node-preview>
+
+    <a href=""
+        ng-if="vm.venues.length === 0"
+        class="umb-node-preview-add"
+        ng-click="vm.openVenuePicker()"
+        prevent-default>
+        <localize key="general_add">Add</localize>
+    </a>
+
+    <umb-overlay
+        ng-if="vm.venuePicker.show"
+        model="vm.venuePicker"
+        view="vm.venuePicker.view"
+        position="right">
+    </umb-overlay>    
+
+</div>    
